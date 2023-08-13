@@ -1,0 +1,19 @@
+.products{
+    width: 250px;
+    height: 250px;
+}
+
+.top-nav-link{
+    text-decoration: none;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+.footer-nav{
+    list-style-type: none;
+}
+
+.footer-nav>li>a{
+    text-decoration: none;
+    color: #000000;
+}
