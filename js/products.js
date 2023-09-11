@@ -6,15 +6,20 @@ class Items{
         this.coler = coler;
         this.name = name;
     }
-
 }
+
+// class a extends Items{
+//     constructor() {
+//         super();
+//     }
+// }
 
 var app = new Vue({
     el: '#app',
     data: {
         item:[
             // 21年
-            new Items(),
+            new Items("Item No.",""),
         ]
     }
 })
