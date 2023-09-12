@@ -57,7 +57,7 @@
     <div class="row my-5">
         <!--    products nav-->
         <div class="col-md-4">
-            <ul class="nav flex-column">
+            <ul class="nav flex-column list-group">
                 <li
                         class="list-group-item"
                         v-for="(category, categoryName) in products"
@@ -65,11 +65,10 @@
                         :class="{ active: selectedCategory === categoryName }"
                         @click="selectCategory(categoryName)"
                 >
-                    {{ categoryName }} >
-
+                    {{ categoryName }}
                 </li>
                 <li
-                        class="list-group-item"
+                        class="list-group-item list-group-item-action"
                         v-for="(subCategory, subCategoryName) in selectedCategoryProducts"
                         :key="subCategoryName"
                         @click="showProduct(subCategory)"
