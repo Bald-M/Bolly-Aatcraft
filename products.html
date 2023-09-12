@@ -31,10 +31,10 @@
                                     <a class="nav-link" href="index.html">Home</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Products</a>
+                                    <a class="nav-link active" href="#">Products</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active" href="about-us.html">About Us</a>
+                                    <a class="nav-link" href="about-us.html">About Us</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">Case</a>
@@ -57,7 +57,7 @@
     <div class="row my-5">
         <!--    products nav-->
         <div class="col-md-4">
-            <ul>
+            <ul class="nav flex-column">
                 <li
                         class="list-group-item"
                         v-for="(category, categoryName) in products"
@@ -65,7 +65,8 @@
                         :class="{ active: selectedCategory === categoryName }"
                         @click="selectCategory(categoryName)"
                 >
-                    {{ categoryName }}
+                    {{ categoryName }} >
+
                 </li>
                 <li
                         class="list-group-item"
@@ -73,7 +74,8 @@
                         :key="subCategoryName"
                         @click="showProduct(subCategory)"
                 >
-                    {{ subCategoryName }}
+                    {{ subCategoryName}}
+
                 </li>
             </ul>
         </div>
@@ -89,7 +91,9 @@
                     <div class="col-md-4" v-for="product in selectedProduct">
                         <div class="img-thumbnail">
                             <img v-bind:src="product.img" alt="product.img" class="w-100">
-                            {{product}}
+                            <p>{{product.itemNo}}</p>
+                            <p>{{product.name}}</p>
+<!--                            {{product}}-->
                         </div>
                     </div>
                 </div>
