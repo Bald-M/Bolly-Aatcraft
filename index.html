@@ -9,52 +9,22 @@
     <link rel="stylesheet" href="bootstrap/font/bootstrap-icons.min.css">
 </head>
 <body>
-    <div class="container" id="app">
-        <div class="row">
-            <!--Top Nav-->
-            <headers></headers>
-        </div>
+    <div class="container" id="templates">
 
-<!--        Carousel -->
-        <div class="row my-md-5">
-            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img v-bind:src="carousels[0]" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item" v-for="carousel in carousels" v-if="carousel != carousels[0]">
-                        <img v-bind:src="carousel" class="d-block w-100" alt="...">
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-        </div>
+<!--        template -->
+        <!--Top Nav-->
 
-<!--        products-->
-        <div class="row my-md-5">
-            <div class="col-md-4" v-for="factory in factories">
-                <div class="img-thumbnail"><img v-bind:src="factory" class="w-100"></div>
-            </div>
-        </div>
+        <headers></headers>
 
-<!--        footer-->
-<!--        template-->
-        <div class="row mt-md-5">
-            <footers></footers>
-        </div>
+        <carousel></carousel>
+
+        <footers></footers>
+
     </div>
 
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="js/templates.js"></script>
-    <script src="js/home.js"></script>
 
 </body>
 </html>
