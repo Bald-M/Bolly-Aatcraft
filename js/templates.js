@@ -96,18 +96,13 @@ Vue.component('footers',{
                             <h6 class="text-uppercase fw-bold mb-4">
                                     <i class="bi bi-info-square-fill me-3 text-secondary"></i>ABOUT US
                             </h6>
-                            <p>
-                                <a href="#!" class="text-reset">News</a>
-                            </p>
-                            <p>
-                                <a href="#!" class="text-reset">Careers</a>
-                            </p>
-                            <p>
-                                <a href="#!" class="text-reset">Investors</a>
-                            </p>
-                            <p>
-                                <a href="#!" class="text-reset">Sustainability</a>
-                            </p>
+                            <ul style="list-style-type: none" >
+                                <li><a href="#" style="text-decoration: none">News</a></li>
+                                <li><a href="#" style="text-decoration: none">Careers</a></li>
+                                <li><a href="#" style="text-decoration: none">Investors</a></li>
+                                <li><a href="#" style="text-decoration: none">Sustainability</a></li>
+                            </ul>
+                            
                         </div>
                         <!-- Grid column -->
 
