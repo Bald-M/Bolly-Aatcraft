@@ -19,26 +19,30 @@
     <div class="row my-5">
         <!--    products nav-->
         <div class="col-md-4">
-            <ul class="nav flex-column list-group">
+            <ul class="list-group">
                 <li
                         class="list-group-item"
                         v-for="(category, categoryName) in products"
                         :key="categoryName"
                         :class="{ active: selectedCategory === categoryName }"
                         @click="selectCategory(categoryName)"
+                        style="color: red"
                 >
                     {{ categoryName }}
-                </li>
-                <li
-                        class="list-group-item list-group-item-action"
-                        v-for="(subCategory, subCategoryName) in selectedCategoryProducts"
-                        :key="subCategoryName"
-                        @click="showProduct(subCategory)"
-                >
-                    {{ subCategoryName}}
-
+                    <!-- 使用 v-if 条件渲染子类别列表 -->
+                    <ul v-if="selectedCategory === categoryName">
+                        <li
+                                class="list-group-item list-group-item-action"
+                                v-for="(subCategory, subCategoryName) in category"
+                                :key="subCategoryName"
+                                @click="showProduct(subCategory)"
+                        >
+                            {{ subCategoryName }}
+                        </li>
+                    </ul>
                 </li>
             </ul>
+
         </div>
 
 <!--        products-->

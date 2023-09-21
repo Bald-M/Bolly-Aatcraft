@@ -80,11 +80,9 @@ Vue.component('carousel',{
     data() {
         return {
             carousels: [
-                'imgs/工厂图片/5.jpg',
-                'imgs/工厂图片/7.jpg',
-                'imgs/工厂图片/9.jpg',
-                'imgs/工厂图片/10.jpg',
-                'imgs/工厂图片/13.jpg'
+                'imgs/Logo/名片场景图.png',
+                'imgs/Logo/立式广告牌场景图.png',
+                'imgs/Logo/室外广告牌场景图.png',
             ]
         }
     }
@@ -135,9 +133,6 @@ Vue.component('thumbnails',{
                 'imgs/工厂图片/20.jpg',
                 'imgs/工厂图片/21.jpg',
                 'imgs/工厂图片/22.jpg',
-            ],
-            products:[
-                'imgs/DM21圣诞产品图/DM21028.jpg',
             ]
         }
     }

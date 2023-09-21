@@ -13,7 +13,7 @@ var app = new Vue({
     data: {
         products: {
             "Christmas": {
-                "Tree": [
+                "Branches & Leaves": [
                     // 2021年
                     new Items("DM21001","imgs/DM21圣诞产品图/DM21001.jpg","#G001","20.5 Oilseed fir with fruit Pendulous Branch"),
                     new Items("DM21002","imgs/DM21圣诞产品图/DM21002.jpg","#G001","29 Oilseed fir with fruit Pendulous Branch"),
@@ -179,7 +179,19 @@ var app = new Vue({
                     new Items("DM21162", "imgs/DM21圣诞产品图/DM21162.jpg", "#R001", "23\"Red Fruit Pendulous Branch"),
                     new Items("DM21163", "imgs/DM21圣诞产品图/DM21163.jpg", "#R001", "30\"Red Fruit Pendulous Branch")
                 ],
-                "Decoration": ["a", "b", "c"]
+                "Potted": ["a", "b", "c"],
+                "Decorations": [],
+                "Others": []
+            },
+            Spring: {
+                "Floral":[],
+                "Foliage":[],
+                "Potted":[],
+                "Fruit & Berries":[],
+                "Statuary":[]
+            },
+            Popular_Product:{
+
             }
         },
         selectedCategory: null,
