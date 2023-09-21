@@ -1,3 +1,53 @@
+Vue.component('headers',{
+    // header template
+    template:
+        `
+        <div class="col-md-12" style="background-color: #f6f6f6">
+                <div class="row">
+                    <div class="col-md-2" style="padding: 0">
+                        <a href="index.html"><img :src="logo" height="115" /></a>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="fs-5">漳州市珀利工艺品有限公司</div>
+                        <div class="fs-5">Zhangzhou Polly Arts Industrial and Trade Co,.Ltd</div>
+                        <nav class="navbar navbar-expand-md">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="index.html">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="showroom.html">Showroom</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="products.html">Products</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="about-us.html">About Us</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="contact-us.html">Contact Us</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="mt-md-3"><a href="#">中文/En</a></div>
+                    </div>
+                </div>
+            </div>
+        `,
+    data() {
+        return {
+            logo: 'imgs/Logo/ResizedLogo配色图.png'
+        }
+    },
+})
+
 Vue.component('footers',{
     // footer template
     // Bootstrap5
