@@ -1,5 +1,5 @@
-Vue.component('headers',{
-    props:['active'],
+Vue.component('headers', {
+    props: ['active'],
     computed: {
         activeItem() {
             if (this.active === 'home') {
@@ -13,40 +13,51 @@ Vue.component('headers',{
         <div class="row">
             <div class="col-md-12 bg-white">
                     <div class="row">
-                    
                         <div class="col-md-2" style="padding: 0">
-                            <a href="index.html"><img :src="logo" height="115" /></a>
+                            <a href="index.html"><img :src="logo" class="logo" /></a>
                         </div>
                         
                         <div class="col-md-8 align-self-md-end">
-                            <nav class="navbar navbar-expand-md">
-                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-                                    <span class="navbar-toggler-icon"></span>
-                                </button>
-                                <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                                    <ul class="navbar-nav">
-                                        <li class="nav-item">
-                                            <a class="nav-link active" href="index.html">Home</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#">Showroom</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="products.html">Products</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="about-us.html">About Us</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="contact-us.html">Contact Us</a>
-                                        </li>
-                                    </ul>
+                            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                                <div class="container-fluid">
+                                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                        <span class="navbar-toggler-icon"></span>
+                                    </button>
+                                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                            <li class="nav-item">
+                                                <a class="nav-link active highlight" href="index.html">HOME</a>
+                                            </li>
+                                            <li class="nav-item dropdown">
+                                                <a class="nav-link dropdown-toggle highlight" hred="#" role="button" data-bs-toggle="dropdown">ABOUT US</a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item highlight" href="company.html">OUR COMPANY</a></li>
+                                                    <li><hr class="dropdown-divider"></li>
+                                                    <li><a class="dropdown-item highlight" href="culture.html">OUR CULTURE</a></li>
+                                                    <li><hr class="dropdown-divider"></li>
+                                                </ul>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link highlight" href="#">SHOWROOM</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link highlight" href="products.html">PRODUCTS</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link highlight" href="#">NEWS</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link highlight" href="contact-us.html">CONTACT US</a>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </nav>
                         </div>
                         
+                        
                         <div class="col-md-2 align-self-md-end">
-                            <div class="mt-md-3"><a href="#">中文/En</a></div>
+                            <div><a href="#">中文/En</a></div>
                         </div>
                     </div>
                 </div>
@@ -60,9 +71,9 @@ Vue.component('headers',{
     },
 })
 
-Vue.component('carousel',{
+Vue.component('carousel', {
     template:
-    `
+        `
         <div class="row">
         <!--        Carousel -->
             <div class="row my-md-5">
@@ -100,7 +111,7 @@ Vue.component('carousel',{
 })
 
 // This is a image thumbnail component
-Vue.component('thumbnails',{
+Vue.component('thumbnails', {
     props: ['images'],
     template:
         `
@@ -125,7 +136,7 @@ Vue.component('thumbnails',{
     },
     data() {
         return {
-            factories:[
+            factories: [
                 'imgs/工厂图片/1.jpg',
                 'imgs/工厂图片/2.jpg',
                 'imgs/工厂图片/3.jpg',
@@ -149,7 +160,7 @@ Vue.component('thumbnails',{
 
 })
 
-Vue.component('footers',{
+Vue.component('footers', {
     // footer template
     // Bootstrap5
     template:

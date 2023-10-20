@@ -5,14 +5,50 @@
     <title>Title</title>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="bootstrap/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/template.css">
 </head>
 <body>
-<div id="template">
-    <div>111</div>
-    <footers></footers>
+<div id="templates">
+    <headers></headers>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active highlight" href="index.html">HOME</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle highlight" hred="#" role="button" data-bs-toggle="dropdown">ABOUT US</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item highlight" href="company.html">OUR COMPANY</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item highlight" href="culture.html">OUR CULTURE</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link highlight" href="#">SHOWROOM</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link highlight" href="products.html">PRODUCTS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link highlight" href="#">NEWS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link highlight" href="contact-us.html">CONTACT US</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 </div>
 
-
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="js/templates.js"></script>
 

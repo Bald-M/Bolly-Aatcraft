@@ -1,0 +1,25 @@
+/* Mobile Phone */
+@media screen and (max-width: 768px) {
+
+    .logo{
+        height: 15px;
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 992px) {
+
+    .logo{
+        height: 115px;
+    }
+
+    .highlight:hover{
+        color: #FC6800;
+    }
+
+    .language-toggle{
+        margin-top: 0px;
+    }
+
+
+}

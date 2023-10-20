@@ -1,0 +1,23 @@
+/* Mobile Phone */
+@media screen and (max-width: 768px) {
+
+    .pill{
+        width: 544px;
+        height: 122px;
+        border: 1px solid #dee2e6;
+        border-radius: 50rem;
+    }
+
+}
+
+/* Desktop */
+@media screen and (min-width: 992px) {
+
+    .pill{
+        width: 544px;
+        height: 122px;
+        border: 1px solid #dee2e6;
+        border-radius: 50rem;
+    }
+
+}
