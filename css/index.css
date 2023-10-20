@@ -1,25 +1,65 @@
-.products{
-    width: 250px;
-    height: 250px;
+/* Mobile Phone */
+@media screen and (max-width: 768px) {
+    .products{
+        width: 250px;
+        height: 250px;
+    }
+
+    .top-nav-link{
+        text-decoration: none;
+        color: #000000;
+        text-transform: uppercase;
+    }
+
+    .navbar-link{
+        background-image: url("../imgs/Logo/Logo配色图.png");
+        background-size: 100% 100%;
+    }
+
+    .banner{
+        width: 1320px;
+        height: 815px;
+    }
+
+    .footer-nav{
+        list-style-type: none;
+    }
+
+    .footer-nav>li>a{
+        text-decoration: none;
+        color: #000000;
+    }
 }
 
-.top-nav-link{
-    text-decoration: none;
-    color: #000000;
-    text-transform: uppercase;
-}
+/* Desktop */
+@media screen and (min-width: 992px) {
+    .products{
+        width: 250px;
+        height: 250px;
+    }
 
-.navbar-link{
-    background-image: url("../imgs/Logo/Logo配色图.png");
-    background-size: 100% 100%;
-}
+    .top-nav-link{
+        text-decoration: none;
+        color: #000000;
+        text-transform: uppercase;
+    }
 
+    .navbar-link{
+        background-image: url("../imgs/Logo/Logo配色图.png");
+        background-size: 100% 100%;
+    }
 
-.footer-nav{
-    list-style-type: none;
-}
+    .banner{
+        width: 1320px;
+        height: 815px;
+    }
 
-.footer-nav>li>a{
-    text-decoration: none;
-    color: #000000;
+    .footer-nav{
+        list-style-type: none;
+    }
+
+    .footer-nav>li>a{
+        text-decoration: none;
+        color: #000000;
+    }
 }

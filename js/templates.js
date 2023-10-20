@@ -1,16 +1,24 @@
 Vue.component('headers',{
+    props:['active'],
+    computed: {
+        activeItem() {
+            if (this.active === 'home') {
+                this.flag = true;
+            }
+        }
+    },
     // header template
     template:
         `
         <div class="row">
-            <div class="col-md-12" style="background-color: #f6f6f6">
+            <div class="col-md-12 bg-white">
                     <div class="row">
+                    
                         <div class="col-md-2" style="padding: 0">
                             <a href="index.html"><img :src="logo" height="115" /></a>
                         </div>
-                        <div class="col-md-8">
-                            <div class="fs-5">漳州市珀利工艺品有限公司</div>
-                            <div class="fs-5">Zhangzhou Polly Arts Industrial and Trade Co,.Ltd</div>
+                        
+                        <div class="col-md-8 align-self-md-end">
                             <nav class="navbar navbar-expand-md">
                                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
                                     <span class="navbar-toggler-icon"></span>
@@ -18,10 +26,10 @@ Vue.component('headers',{
                                 <div class="collapse navbar-collapse" id="collapsibleNavbar">
                                     <ul class="navbar-nav">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="index.html">Home</a>
+                                            <a class="nav-link active" href="index.html">Home</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="showroom.html">Showroom</a>
+                                            <a class="nav-link" href="#">Showroom</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" href="products.html">Products</a>
@@ -36,7 +44,8 @@ Vue.component('headers',{
                                 </div>
                             </nav>
                         </div>
-                        <div class="col-md-2">
+                        
+                        <div class="col-md-2 align-self-md-end">
                             <div class="mt-md-3"><a href="#">中文/En</a></div>
                         </div>
                     </div>
@@ -45,7 +54,8 @@ Vue.component('headers',{
         `,
     data() {
         return {
-            logo: 'imgs/Logo/ResizedLogo配色图.png'
+            logo: 'imgs/Logo/ResizedLogo配色图.png',
+            flag: false
         }
     },
 })
