@@ -38,7 +38,7 @@ Vue.component('headers', {
                                                 </ul>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link highlight" href="#">SHOWROOM</a>
+                                                <a class="nav-link highlight" href="showroom.html">SHOWROOM</a>
                                             </li>
                                             <li class="nav-item">
                                                 <a class="nav-link highlight" href="products.html">PRODUCTS</a>
@@ -72,6 +72,7 @@ Vue.component('headers', {
 })
 
 Vue.component('carousel', {
+    props: ['images'],
     template:
         `
         <div class="row">
@@ -80,10 +81,10 @@ Vue.component('carousel', {
                 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img v-bind:src="carousels[0]" class="d-block w-100" alt="...">
+                            <img :src="selectedImages[0]" class="d-block w-100" alt="...">
                         </div>
-                        <div class="carousel-item" v-for="carousel in carousels" v-if="carousel != carousels[0]">
-                            <img v-bind:src="carousel" class="d-block w-100" alt="...">
+                        <div class="carousel-item" v-for="image in selectedImages" v-if="image != selectedImages[0]">
+                            <img :src="image" class="d-block w-100" alt="...">
                         </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -98,16 +99,52 @@ Vue.component('carousel', {
             </div>
         </div>
     `,
-    data() {
-        return {
-            carousels: [
-                'imgs/Logo/名片场景图.png',
-                'imgs/Logo/立式广告牌场景图.png',
-                'imgs/Logo/室外广告牌场景图.png',
-            ]
+    computed: {
+        selectedImages() {
+            // 根据传入的 images 参数选择要渲染的图片集合
+            if (this.images === 'factories')
+            {
+                return this.factories;
+            }
+            else if (this.images === 'showrooms')
+            {
+                return this.showrooms;
+            }
+            else
+            {
+                // 如果传入的参数不匹配任何选项，返回一个空数组或其他适当的默认值
+                return [];
+            }
         }
-    }
-
+    },
+        data() {
+            return {
+                showrooms: [
+                    'imgs/Showroom/showroom1.jpg',
+                    'imgs/Showroom/showroom2.jpg',
+                    'imgs/Showroom/showroom3.jpg'
+                ],
+                factories: [
+                    'imgs/工厂图片/1.jpg',
+                    'imgs/工厂图片/2.jpg',
+                    'imgs/工厂图片/3.jpg',
+                    'imgs/工厂图片/4.jpg',
+                    'imgs/工厂图片/6.jpg',
+                    'imgs/工厂图片/8.jpg',
+                    'imgs/工厂图片/11.jpg',
+                    'imgs/工厂图片/12.jpg',
+                    'imgs/工厂图片/14.jpg',
+                    'imgs/工厂图片/15.jpg',
+                    'imgs/工厂图片/16.jpg',
+                    'imgs/工厂图片/17.jpg',
+                    'imgs/工厂图片/18.jpg',
+                    'imgs/工厂图片/19.jpg',
+                    'imgs/工厂图片/20.jpg',
+                    'imgs/工厂图片/21.jpg',
+                    'imgs/工厂图片/22.jpg',
+                ]
+            }
+        }
 })
 
 // This is a image thumbnail component
