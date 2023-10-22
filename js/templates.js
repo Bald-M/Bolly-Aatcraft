@@ -1,12 +1,5 @@
 Vue.component('headers', {
     props: ['active'],
-    computed: {
-        activeItem() {
-            if (this.active === 'home') {
-                this.flag = true;
-            }
-        }
-    },
     // header template
     template:
         `
@@ -26,10 +19,12 @@ Vue.component('headers', {
                                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                             <li class="nav-item">
-                                                <a class="nav-link active highlight" href="index.html">HOME</a>
+                                                <a class="nav-link highlight active text-active"  v-if="active === 'home'" href="index.html">HOME</a>
+                                                <a class="nav-link highlight " v-else href="index.html">HOME</a>
                                             </li>
                                             <li class="nav-item dropdown">
-                                                <a class="nav-link dropdown-toggle highlight" hred="#" role="button" data-bs-toggle="dropdown">ABOUT US</a>
+                                                <a class="nav-link dropdown-toggle highlight text-active" v-if="active === 'aboutus'" role="button" data-bs-toggle="dropdown">ABOUT US</a>
+                                                <a class="nav-link dropdown-toggle highlight" v-else role="button" data-bs-toggle="dropdown">ABOUT US</a>
                                                 <ul class="dropdown-menu">
                                                     <li><a class="dropdown-item highlight" href="company.html">OUR COMPANY</a></li>
                                                     <li><hr class="dropdown-divider"></li>
@@ -38,16 +33,19 @@ Vue.component('headers', {
                                                 </ul>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link highlight" href="showroom.html">SHOWROOM</a>
+                                                <a class="nav-link highlight active text-active" v-if="active === 'showroom'" href="showroom.html">SHOWROOM</a>
+                                                <a class="nav-link highlight" v-else href="showroom.html">SHOWROOM</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link highlight" href="products.html">PRODUCTS</a>
+                                                <a class="nav-link highlight active text-active" v-if="active === 'products'" href="products.html">PRODUCTS</a>
+                                                <a class="nav-link highlight" v-else href="products.html">PRODUCTS</a>
                                             </li>
                                             <li class="nav-item">
                                                 <a class="nav-link highlight" href="#">NEWS</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link highlight" href="contact-us.html">CONTACT US</a>
+                                                <a class="nav-link highlight active text-active" v-if="active === 'contactus'" href="contact-us.html">CONTACT US</a>
+                                                <a class="nav-link highlight" v-else href="contact-us.html">CONTACT US</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -66,7 +64,6 @@ Vue.component('headers', {
     data() {
         return {
             logo: 'imgs/Logo/ResizedLogo配色图.png',
-            flag: false
         }
     },
 })

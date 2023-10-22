@@ -4,6 +4,24 @@
     .logo{
         height: 15px;
     }
+
+    .highlight:hover{
+        color: #FC6800;
+    }
+
+    .language-toggle{
+        margin-top: 0px;
+    }
+
+    .size{
+        width: 1272px;
+        height: 689px;
+    }
+
+    .text-active{
+        --bs-text-opacity: 1;
+        color: #FC6800;
+    }
 }
 
 /* Desktop */
@@ -24,6 +42,11 @@
     .size{
         width: 1272px;
         height: 689px;
+    }
+
+    .text-active{
+        --bs-text-opacity: 1;
+        color: #FC6800 !important;
     }
 
 }
