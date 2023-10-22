@@ -81,10 +81,10 @@ Vue.component('carousel', {
                 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img :src="selectedImages[0]" class="d-block w-100" alt="...">
+                            <img :src="selectedImages[0]" class="d-block w-100 size">
                         </div>
                         <div class="carousel-item" v-for="image in selectedImages" v-if="image != selectedImages[0]">
-                            <img :src="image" class="d-block w-100" alt="...">
+                            <img :src="image" class="d-block w-100 size">
                         </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
