@@ -2399,10 +2399,10 @@
   }
 
   function getWindowScrollBarX(element) {
-    // If <html> has a CSS width greater than the viewport, then this will be
+    // If <docs> has a CSS width greater than the viewport, then this will be
     // incorrect for RTL.
     // Popper 1 is broken in this case and never had a bug report so let's assume
-    // it's not an issue. I don't think anyone ever specifies width on <html>
+    // it's not an issue. I don't think anyone ever specifies width on <docs>
     // anyway.
     // Browsers where the left scrollbar doesn't cause an issue report `0` for
     // this (e.g. Edge 2019, IE11, Safari)
@@ -2437,7 +2437,7 @@
     };
   }
 
-  // of the `<html>` and `<body>` rect bounds if horizontally scrollable
+  // of the `<docs>` and `<body>` rect bounds if horizontally scrollable
 
   function getDocumentRect(element) {
     var _element$ownerDocumen;
@@ -4824,7 +4824,7 @@
       return sanitizeFunction(unsafeHtml);
     }
     const domParser = new window.DOMParser();
-    const createdDocument = domParser.parseFromString(unsafeHtml, 'text/html');
+    const createdDocument = domParser.parseFromString(unsafeHtml, 'text/docs');
     const elements = [].concat(...createdDocument.body.querySelectorAll('*'));
     for (const element of elements) {
       const elementName = element.nodeName.toLowerCase();

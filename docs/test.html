@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="bootstrap/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="css/template.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../bootstrap/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/template.css">
 
 </head>
 <body>
 <div id="app">
 
     <div>
-        <div>Menu</div>
+        <div v-on:click="active('menu')">Menu</div>
 <!--        sub menu-->
-        <div>
+        <div v-show="visible">
             <div>{{a}}</div>
             <div>{{b}}</div>
             <div>{{c}}</div>
@@ -22,7 +22,12 @@
 
         <div>UI</div>
         <div>Casino</div>
+    </div>
 
+    <hr>
+
+    <div>
+        <p>Content</p>
     </div>
 
 </div>
@@ -36,6 +41,13 @@
             a: 'Menu1',
             b: 'Menu2',
             c: 'Menu3',
+            visible: false,
+        },
+        methods: {
+            active: function (name) {
+                this.visible = !this.visible
+                console.log(name);
+            }
         }
     })
 </script>
