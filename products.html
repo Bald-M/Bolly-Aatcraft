@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Products</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/template.css">
+</head>
+
+<body>
+<div class="container" id="app">
+    <!--Top Nav-->
+
+    <headers></headers>
+
+
+    <!--    products -->
+    <div class="row my-5">
+        <!--    products nav-->
+        <div class="col-md-4">
+            <ul class="list-group">
+                <li
+                        class="list-group-item"
+                        v-for="(category, categoryName) in products"
+                        :key="categoryName"
+                        :class="{ active: selectedCategory === categoryName }"
+                        @click="selectCategory(categoryName)"
+                        style="color: red"
+                >
+                    {{ categoryName }}
+                    <!-- 使用 v-if 条件渲染子类别列表 -->
+                    <ul v-if="selectedCategory === categoryName">
+                        <li
+                                class="list-group-item list-group-item-action"
+                                v-for="(subCategory, subCategoryName) in category"
+                                :key="subCategoryName"
+                                @click="showProduct(subCategory)"
+                        >
+                            {{ subCategoryName }}
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+
+<!--        products-->
+        <div class="col-md-8">
+            <div v-if="selectedProduct === null">
+                请选择一个产品
+            </div>
+            <div v-else>
+                <!-- 根据选中的产品显示内容 -->
+                <div class="row">
+                    <div class="col-md-4" v-for="product in selectedProduct">
+                        <div class="img-thumbnail">
+                            <img v-bind:src="product.img" alt="product.img" class="w-100">
+                            <p>{{product.itemNo}}</p>
+                            <p>{{product.name}}</p>
+<!--                            {{product}}-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!--    Footer-->
+    <footers></footers>
+
+</div>
+
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script src="js/templates.js"></script>
+<script src="js/products.js"></script>
+
+</body>
+</html>
