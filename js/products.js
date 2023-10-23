@@ -8,9 +8,23 @@ class Items{
     }
 }
 
+Vue.component('product-component',{
+    props: ['product'],
+    template:
+        `
+        `
+})
+
 var app = new Vue({
     el: '#app',
     data: {
+        visible: {
+            // Christmas > Potted > Decorations
+            christmas: false,
+            potted: false,
+            spring: false
+        },
+        content: '',
         products: {
             "Christmas": {
                 "Branches & Leaves": [
@@ -189,25 +203,25 @@ var app = new Vue({
                 "Potted":[],
                 "Fruit & Berries":[],
                 "Statuary":[]
-            },
-            Popular_Product:{
-
             }
-        },
-        selectedCategory: null,
-        selectedCategoryProducts: {},
-        selectedProduct: null
+        }
     },
     methods: {
-        selectCategory(categoryName) {
-            // 点击产品类别时，更新选中的类别和类别的产品
-            this.selectedCategory = categoryName;
-            this.selectedCategoryProducts = this.products[categoryName];
-            this.selectedProduct = null; // 重置选中的产品
+        menuVisibility: function (menuName) {
+            if (menuName === "Christmas") {
+                this.visible.christmas = !this.visible.christmas;
+                this.content = '';
+            }
+            else if (menuName === "Potted") {
+                this.visible.potted = !this.visible.potted;
+            }
+            else if (menuName === "Spring") {
+                this.visible.spring = !this.visible.spring;
+            }
         },
-        showProduct(productName) {
-            // 点击产品时，显示对应的产品内容
-            this.selectedProduct = productName;
+        getMenu: function (menuName) {
+            console.log(menuName);
+            return menuName;
         }
     }
 })

@@ -21,5 +21,9 @@
         margin-top: 0px;
     }
 
+    .text-highlight{
+        --bs-text-opacity: 1;
+        color: #FC6800 !important;
+    }
 
 }

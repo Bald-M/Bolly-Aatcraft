@@ -9,88 +9,14 @@
 </head>
 
 <body>
-<div class="container" id="app">
+<div class="container" id="templates">
     <!--Top Nav-->
 
-    <headers></headers>
+    <headers active="PRODUCTS"></headers>
 
 
     <!--    products nav side bar-->
-    <div class="row my-md-5">
-
-        <div class="col-md-4">
-            <div>Christmas</div>
-<!--            sub menu -->
-            <div>
-                <div>Branches & Leaves</div>
-                <div>Circle</div>
-                <div>Long Vine</div>
-                <div>Water Drop</div>
-                <div>Lintel</div>
-                <div>Candlestick</div>
-            </div>
-
-            <div>Spring</div>
-            <div>Popular product</div>
-        </div>
-
-        <div class="col-md-8">
-            Content
-        </div>
-
-    </div>
-
-
-<!--    <div class="row my-5">-->
-<!--        &lt;!&ndash;    products nav&ndash;&gt;-->
-<!--        <div class="col-md-4">-->
-<!--            <ul class="list-group">-->
-<!--                <li-->
-<!--                        class="list-group-item"-->
-<!--                        v-for="(category, categoryName) in products"-->
-<!--                        :key="categoryName"-->
-<!--                        :class="{ active: selectedCategory === categoryName }"-->
-<!--                        @click="selectCategory(categoryName)"-->
-<!--                        style="color: red"-->
-<!--                >-->
-<!--                    {{ categoryName }}-->
-<!--                    &lt;!&ndash; 使用 v-if 条件渲染子类别列表 &ndash;&gt;-->
-<!--                    <ul v-if="selectedCategory === categoryName">-->
-<!--                        <li-->
-<!--                                class="list-group-item list-group-item-action"-->
-<!--                                v-for="(subCategory, subCategoryName) in category"-->
-<!--                                :key="subCategoryName"-->
-<!--                                @click="showProduct(subCategory)"-->
-<!--                        >-->
-<!--                            {{ subCategoryName }}-->
-<!--                        </li>-->
-<!--                    </ul>-->
-<!--                </li>-->
-<!--            </ul>-->
-
-<!--        </div>-->
-
-<!--        products-->
-<!--        <div class="col-md-8">-->
-<!--            <div v-if="selectedProduct === null">-->
-<!--                请选择一个产品-->
-<!--            </div>-->
-<!--            <div v-else>-->
-<!--                &lt;!&ndash; 根据选中的产品显示内容 &ndash;&gt;-->
-<!--                <div class="row">-->
-<!--                    <div class="col-md-4" v-for="product in selectedProduct">-->
-<!--                        <div class="img-thumbnail">-->
-<!--                            <img v-bind:src="product.img" alt="product.img" class="w-100">-->
-<!--                            <p>{{product.itemNo}}</p>-->
-<!--                            <p>{{product.name}}</p>-->
-<!--&lt;!&ndash;                            {{product}}&ndash;&gt;-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-
-<!--    </div>-->
+    <product></product>
 
     <!--    Footer-->
     <footers></footers>
@@ -100,7 +26,7 @@
 <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 <script src="js/templates.js"></script>
-<script src="js/products.js"></script>
+<!--<script src="js/products.js"></script>-->
 
 </body>
 </html>

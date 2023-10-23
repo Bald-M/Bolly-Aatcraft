@@ -1,12 +1,5 @@
 Vue.component('headers', {
     props: ['active'],
-    computed: {
-        activeItem() {
-            if (this.active === 'home') {
-                this.flag = true;
-            }
-        }
-    },
     // header template
     template:
         `
@@ -26,10 +19,12 @@ Vue.component('headers', {
                                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                             <li class="nav-item">
-                                                <a class="nav-link active highlight" href="index.html">HOME</a>
+                                                <a class="nav-link active highlight text-highlight" v-if="active === 'HOME'" href="index.html">HOME</a>
+                                                <a class="nav-link highlight" v-else href="index.html">HOME</a>
                                             </li>
                                             <li class="nav-item dropdown">
-                                                <a class="nav-link dropdown-toggle highlight" hred="#" role="button" data-bs-toggle="dropdown">ABOUT US</a>
+                                                <a class="nav-link dropdown-toggle highlight active text-highlight" v-if="active === 'ABOUT-US'" role="button" data-bs-toggle="dropdown">ABOUT US</a>
+                                                <a class="nav-link dropdown-toggle highlight" v-else role="button" data-bs-toggle="dropdown">ABOUT US</a>
                                                 <ul class="dropdown-menu">
                                                     <li><a class="dropdown-item highlight" href="company.html">OUR COMPANY</a></li>
                                                     <li><hr class="dropdown-divider"></li>
@@ -38,16 +33,19 @@ Vue.component('headers', {
                                                 </ul>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link highlight" href="showroom.html">SHOWROOM</a>
+                                                <a class="nav-link highlight active text-highlight" v-if="active === 'SHOWROOM'" href="showroom.html">SHOWROOM</a>
+                                                <a class="nav-link highlight" v-else href="showroom.html">SHOWROOM</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link highlight" href="products.html">PRODUCTS</a>
+                                                <a class="nav-link highlight active text-highlight" v-if="active === 'PRODUCTS'" href="products.html">PRODUCTS</a>
+                                                <a class="nav-link highlight" v-else href="products.html">PRODUCTS</a>
                                             </li>
                                             <li class="nav-item">
                                                 <a class="nav-link highlight" href="#">NEWS</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link highlight" href="contact-us.html">CONTACT US</a>
+                                                <a class="nav-link highlight active text-highlight" v-if="active === 'CONTACT-US'" href="contact-us.html">CONTACT US</a>
+                                                <a class="nav-link highlight" v-else href="contact-us.html">CONTACT US</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -236,7 +234,7 @@ Vue.component('footers', {
                 <!-- Section: Social media -->
     
                 <!-- Section: Links  -->
-                <section class="">
+                <section>
                     <div class="container text-center text-md-start mt-5">
                         <!-- Grid row -->
                         <div class="row mt-3">
@@ -296,6 +294,92 @@ Vue.component('footers', {
         </div>
         `
 })
+
+Vue.component('product', {
+    template:
+    `
+    <div class="row my-md-5">
+        <div class="col-md-4">
+            <div v-on:click="menuVisibility('Christmas')">Christmas</div>
+<!--            Christmas sub menu -->
+            <div class="mx-md-3" v-show="visible.christmas">
+                <div v-on:click="getMenu('Branches & Leaves')">Branches & Leaves</div>
+                <div v-on:click="getMenu('Circle')">Circle</div>
+                <div v-on:click="getMenu('Long Vine')">Long Vine</div>
+                <div v-on:click="getMenu('Water Drop')">Water Drop</div>
+                <div v-on:click="getMenu('Lintel')">Lintel</div>
+                <div v-on:click="getMenu('Candlestick')">Candlestick</div>
+                <div v-on:click="menuVisibility('Potted')">Potted</div>
+                <div class="mx-md-3" v-show="visible.potted">
+                    <div v-on:click="menuVisibility('Decorations')">Decorations</div>
+                </div>
+                <div v-on:click="menuVisibility('Others')">Others</div>
+            </div>
+
+            <div v-on:click="menuVisibility('Spring')">Spring</div>
+<!--            spring sub menu-->
+            <div class="mx-md-3" v-show="visible.spring">
+                <div v-on:click="menuVisibility('Floral')">Floral</div>
+                <div v-on:click="menuVisibility('Foliage')">Foliage</div>
+                <div v-on:click="menuVisibility('Potted')">Potted</div>
+                <div v-on:click="menuVisibility('Fruit & Berries')">Fruit & Berries</div>
+                <div v-on:click="menuVisibility('Others')">Others</div>
+            </div>
+            <div v-on:click="menuVisibility('Popular product')">Popular product</div>
+        </div>
+
+        <div class="col-md-8">
+            <div v-if="clickedMenu === 'Circle'">
+                <h1>Circle</h1>
+            </div>
+            <div v-if="clickedMenu === 'Branches & Leaves'">
+                <h1>Branches & Leaves</h1>
+            </div>
+        </div>
+    </div>
+    `,
+    data() {
+        return {
+            visible: {
+                christmas: false,
+                potted: false,
+                spring: false
+            },
+            clickedMenu: ''
+        }
+    },
+    methods: {
+        menuVisibility: function (menuName) {
+            if (menuName === "Christmas") {
+                this.visible.christmas = !this.visible.christmas;
+            }
+            else if (menuName === "Potted") {
+                this.visible.potted = !this.visible.potted;
+            }
+            else if (menuName === "Spring") {
+                this.visible.spring = !this.visible.spring;
+            }
+        },
+        getMenu: function (menuName) {
+            this.clickedMenu = menuName;
+        }
+    }
+})
+
+Vue.component('my-component', {
+    data() {
+        return {
+            value: 10,
+        };
+    },
+    methods: {
+        doubleValue() {
+            this.value *= 2;
+        },
+    },
+    template: '<div><p>原始值：{{ value }}</p><button @click="doubleValue">Double Value</button></div>',
+});
+
 
 new Vue({
     el: '#templates'
