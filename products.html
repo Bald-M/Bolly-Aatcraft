@@ -16,15 +16,28 @@
 
 
     <!--    products nav side bar-->
-    <div>
-        <div>
+    <div class="row my-md-5">
+
+        <div class="col-md-4">
             <div>Christmas</div>
 <!--            sub menu -->
-            <div></div>
+            <div>
+                <div>Branches & Leaves</div>
+                <div>Circle</div>
+                <div>Long Vine</div>
+                <div>Water Drop</div>
+                <div>Lintel</div>
+                <div>Candlestick</div>
+            </div>
 
             <div>Spring</div>
             <div>Popular product</div>
         </div>
+
+        <div class="col-md-8">
+            Content
+        </div>
+
     </div>
 
 
@@ -58,26 +71,26 @@
 <!--        </div>-->
 
 <!--        products-->
-        <div class="col-md-8">
-            <div v-if="selectedProduct === null">
-                请选择一个产品
-            </div>
-            <div v-else>
-                <!-- 根据选中的产品显示内容 -->
-                <div class="row">
-                    <div class="col-md-4" v-for="product in selectedProduct">
-                        <div class="img-thumbnail">
-                            <img v-bind:src="product.img" alt="product.img" class="w-100">
-                            <p>{{product.itemNo}}</p>
-                            <p>{{product.name}}</p>
-<!--                            {{product}}-->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+<!--        <div class="col-md-8">-->
+<!--            <div v-if="selectedProduct === null">-->
+<!--                请选择一个产品-->
+<!--            </div>-->
+<!--            <div v-else>-->
+<!--                &lt;!&ndash; 根据选中的产品显示内容 &ndash;&gt;-->
+<!--                <div class="row">-->
+<!--                    <div class="col-md-4" v-for="product in selectedProduct">-->
+<!--                        <div class="img-thumbnail">-->
+<!--                            <img v-bind:src="product.img" alt="product.img" class="w-100">-->
+<!--                            <p>{{product.itemNo}}</p>-->
+<!--                            <p>{{product.name}}</p>-->
+<!--&lt;!&ndash;                            {{product}}&ndash;&gt;-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
 
-    </div>
+<!--    </div>-->
 
     <!--    Footer-->
     <footers></footers>
