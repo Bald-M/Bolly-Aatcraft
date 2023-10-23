@@ -15,35 +15,47 @@
     <headers></headers>
 
 
-    <!--    products -->
-    <div class="row my-5">
-        <!--    products nav-->
-        <div class="col-md-4">
-            <ul class="list-group">
-                <li
-                        class="list-group-item"
-                        v-for="(category, categoryName) in products"
-                        :key="categoryName"
-                        :class="{ active: selectedCategory === categoryName }"
-                        @click="selectCategory(categoryName)"
-                        style="color: red"
-                >
-                    {{ categoryName }}
-                    <!-- 使用 v-if 条件渲染子类别列表 -->
-                    <ul v-if="selectedCategory === categoryName">
-                        <li
-                                class="list-group-item list-group-item-action"
-                                v-for="(subCategory, subCategoryName) in category"
-                                :key="subCategoryName"
-                                @click="showProduct(subCategory)"
-                        >
-                            {{ subCategoryName }}
-                        </li>
-                    </ul>
-                </li>
-            </ul>
+    <!--    products nav side bar-->
+    <div>
+        <div>
+            <div>Christmas</div>
+<!--            sub menu -->
+            <div></div>
 
+            <div>Spring</div>
+            <div>Popular product</div>
         </div>
+    </div>
+
+
+<!--    <div class="row my-5">-->
+<!--        &lt;!&ndash;    products nav&ndash;&gt;-->
+<!--        <div class="col-md-4">-->
+<!--            <ul class="list-group">-->
+<!--                <li-->
+<!--                        class="list-group-item"-->
+<!--                        v-for="(category, categoryName) in products"-->
+<!--                        :key="categoryName"-->
+<!--                        :class="{ active: selectedCategory === categoryName }"-->
+<!--                        @click="selectCategory(categoryName)"-->
+<!--                        style="color: red"-->
+<!--                >-->
+<!--                    {{ categoryName }}-->
+<!--                    &lt;!&ndash; 使用 v-if 条件渲染子类别列表 &ndash;&gt;-->
+<!--                    <ul v-if="selectedCategory === categoryName">-->
+<!--                        <li-->
+<!--                                class="list-group-item list-group-item-action"-->
+<!--                                v-for="(subCategory, subCategoryName) in category"-->
+<!--                                :key="subCategoryName"-->
+<!--                                @click="showProduct(subCategory)"-->
+<!--                        >-->
+<!--                            {{ subCategoryName }}-->
+<!--                        </li>-->
+<!--                    </ul>-->
+<!--                </li>-->
+<!--            </ul>-->
+
+<!--        </div>-->
 
 <!--        products-->
         <div class="col-md-8">
