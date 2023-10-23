@@ -20,7 +20,7 @@ Vue.component('headers', {
                                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                             <li class="nav-item">
                                                 <a class="nav-link highlight active text-active"  v-if="active === 'home'" href="index.html">HOME</a>
-                                                <a class="nav-link highlight " v-else href="index.html">HOME</a>
+                                                <a class="nav-link highlight" v-else href="index.html">HOME</a>
                                             </li>
                                             <li class="nav-item dropdown">
                                                 <a class="nav-link dropdown-toggle highlight text-active" v-if="active === 'aboutus'" role="button" data-bs-toggle="dropdown">ABOUT US</a>
@@ -63,7 +63,7 @@ Vue.component('headers', {
         `,
     data() {
         return {
-            logo: 'imgs/Logo/ResizedLogo配色图.png',
+            logo: '../assets/imgs/Logo/ResizedLogo配色图.png',
         }
     },
 })
@@ -117,9 +117,9 @@ Vue.component('carousel', {
         data() {
             return {
                 showrooms: [
-                    'imgs/Showroom/showroom1.jpg',
-                    'imgs/Showroom/showroom2.jpg',
-                    'imgs/Showroom/showroom3.jpg'
+                    '../assets/imgs/Showroom/showroom1.jpg',
+                    '../assets/imgs/Showroom/showroom2.jpg',
+                    '../assets/imgs/Showroom/showroom3.jpg'
                 ],
                 factories: [
                     'imgs/工厂图片/1.jpg',

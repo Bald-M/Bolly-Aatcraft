@@ -3,7 +3,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(express.static(__dirname)); // 以当前目录为静态资源目录
-app.get('/', (req, res) => {
+app.get('html/', (req, res) => {
     res.sendFile(__dirname + '/index.html');
 });
 
