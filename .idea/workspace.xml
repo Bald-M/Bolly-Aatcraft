@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="67a623c9-3f3e-4f86-a66a-d6843de8e036" name="Default Changelist" comment="&quot;Update product&quot;">
+    <list default="true" id="67a623c9-3f3e-4f86-a66a-d6843de8e036" name="Default Changelist" comment="&quot;Add nav active style &amp; Database&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact-us.html" beforeDir="false" afterPath="$PROJECT_DIR$/contact-us.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/template.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/template.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/products.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/products.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/templates.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/templates.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/products.html" beforeDir="false" afterPath="$PROJECT_DIR$/products.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,10 +39,7 @@
   <component name="RunManager">
     <configuration name="start" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="start" />
-      </scripts>
+      <command value="start" />
       <node-interpreter value="project" />
       <envs />
       <method v="2" />
@@ -55,7 +53,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1698042877385</updated>
-      <workItem from="1698042880469" duration="13150000" />
+      <workItem from="1698042880469" duration="18274000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;Revert to Nodejs&quot;">
       <created>1698043140352</created>
@@ -85,7 +83,14 @@
       <option name="project" value="LOCAL" />
       <updated>1698047259040</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="&quot;Add nav active style &amp; Database&quot;">
+      <created>1698058688604</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1698058688604</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -119,6 +124,8 @@
     <MESSAGE value="&quot;Add imgs&quot;" />
     <MESSAGE value="&quot;Add product nav side bar&quot;" />
     <MESSAGE value="&quot;Update product&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;Update product&quot;" />
+    <MESSAGE value="&quot;Add nav active style&quot;" />
+    <MESSAGE value="&quot;Add nav active style &amp; Database&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Add nav active style &amp; Database&quot;" />
   </component>
 </project>

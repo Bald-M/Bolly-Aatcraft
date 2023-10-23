@@ -319,22 +319,24 @@ Vue.component('product', {
             <div v-on:click="menuVisibility('Spring')">Spring</div>
 <!--            spring sub menu-->
             <div class="mx-md-3" v-show="visible.spring">
-                <div v-on:click="menuVisibility('Floral')">Floral</div>
-                <div v-on:click="menuVisibility('Foliage')">Foliage</div>
-                <div v-on:click="menuVisibility('Potted')">Potted</div>
-                <div v-on:click="menuVisibility('Fruit & Berries')">Fruit & Berries</div>
-                <div v-on:click="menuVisibility('Others')">Others</div>
+                <div>Floral</div>
+                <div>Foliage</div>
+                <div>Potted</div>
+                <div>Fruit & Berries</div>
+                <div>Others</div>
             </div>
             <div v-on:click="menuVisibility('Popular product')">Popular product</div>
         </div>
 
         <div class="col-md-8">
+            <div v-if="clickedMenu === 'Branches & Leaves'">
+                <h1>{{ christmasData }}</h1>
+            </div>
+            
             <div v-if="clickedMenu === 'Circle'">
                 <h1>Circle</h1>
             </div>
-            <div v-if="clickedMenu === 'Branches & Leaves'">
-                <h1>Branches & Leaves</h1>
-            </div>
+            
         </div>
     </div>
     `,
@@ -345,7 +347,8 @@ Vue.component('product', {
                 potted: false,
                 spring: false
             },
-            clickedMenu: ''
+            clickedMenu: '',
+            christmasData: {},
         }
     },
     methods: {
@@ -362,24 +365,25 @@ Vue.component('product', {
         },
         getMenu: function (menuName) {
             this.clickedMenu = menuName;
+        },
+        loadData() {
+            axios.get('/api/christmas')
+                .then(response => {
+                    this.christmasData = response.data;
+                })
+                .catch(error => {
+                    console.error('Error fetching Circle data:', error);
+                });
+        }
+    },
+    watch: {
+        clickedMenu(value) {
+            if (value === 'Branches & Leaves') {
+                this.loadData();
+            }
         }
     }
 })
-
-Vue.component('my-component', {
-    data() {
-        return {
-            value: 10,
-        };
-    },
-    methods: {
-        doubleValue() {
-            this.value *= 2;
-        },
-    },
-    template: '<div><p>原始值：{{ value }}</p><button @click="doubleValue">Double Value</button></div>',
-});
-
 
 new Vue({
     el: '#templates'
