@@ -9,7 +9,7 @@ app.use(express.static(__dirname));
 app.use(cors()); // 允许跨域请求
 
 // 连接到SQLite数据库
-const db = new sqlite3.Database('Bolly-Aatcraft'); // 请替换为实际的数据库文件
+const db = new sqlite3.Database('Bolly-Aatcraft.sqlite'); // 请替换为实际的数据库文件
 
 // 设置静态文件目录
 app.get('/', (req, res) => {
