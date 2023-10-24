@@ -1,13 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="67a623c9-3f3e-4f86-a66a-d6843de8e036" name="Default Changelist" comment="&quot;Update database and product page&quot;">
+    <list default="true" id="67a623c9-3f3e-4f86-a66a-d6843de8e036" name="Default Changelist" comment="&quot;Dynamic Web&quot;">
+      <change afterPath="$PROJECT_DIR$/netlify.toml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -23,11 +34,20 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Projects\Bolly-Aatcraft" />
+      <recent name="D:\Projects\Bolly-Aatcraft\src" />
+      <recent name="D:\Projects\Bolly-Aatcraft\dist" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="start" type="js.build_tools.npm" nameIsGenerated="true">
@@ -47,6 +67,7 @@
       <option name="presentableId" value="Default" />
       <updated>1698042877385</updated>
       <workItem from="1698042880469" duration="20365000" />
+      <workItem from="1698129225309" duration="1538000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;Revert to Nodejs&quot;">
       <created>1698043140352</created>
@@ -90,7 +111,14 @@
       <option name="project" value="LOCAL" />
       <updated>1698066464549</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="&quot;Dynamic Web&quot;">
+      <created>1698129252201</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1698129252201</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -118,6 +146,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="&quot;Revert to Nodejs&quot;" />
@@ -127,6 +156,7 @@
     <MESSAGE value="&quot;Add nav active style&quot;" />
     <MESSAGE value="&quot;Add nav active style &amp; Database&quot;" />
     <MESSAGE value="&quot;Update database and product page&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;Update database and product page&quot;" />
+    <MESSAGE value="&quot;Dynamic Web&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Dynamic Web&quot;" />
   </component>
 </project>

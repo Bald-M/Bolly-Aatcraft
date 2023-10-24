@@ -1,7 +1,7 @@
 const express = require('express');
 const sqlite3 = require('sqlite3').verbose();
 const cors = require('cors');
-
+const serverless = require('serverless-http');
 const app = express();
 const port = 3000; // 你可以选择任何端口号
 
