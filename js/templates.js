@@ -10,7 +10,7 @@ Vue.component('headers', {
                             <a href="index.html"><img :src="logo" class="logo" /></a>
                         </div>
                         
-                        <div class="col-md-8 align-self-md-end">
+                        <div class="col-md-10 align-self-md-end">
                             <nav class="navbar navbar-expand-lg">
                                 <div class="container-fluid">
                                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -51,11 +51,6 @@ Vue.component('headers', {
                                     </div>
                                 </div>
                             </nav>
-                        </div>
-                        
-                        
-                        <div class="col-md-2 align-self-md-end">
-                            <div><a href="#">中文/En</a></div>
                         </div>
                     </div>
                 </div>
@@ -310,10 +305,10 @@ Vue.component('product', {
                 <div v-on:click="getMenu('Lintel')">Lintel</div>
                 <div v-on:click="getMenu('Candlestick')">Candlestick</div>
                 <div v-on:click="menuVisibility('Potted')">Potted</div>
-                <div class="mx-md-3" v-show="visible.potted">
-                    <div v-on:click="menuVisibility('Decorations')">Decorations</div>
-                </div>
-                <div v-on:click="menuVisibility('Others')">Others</div>
+                    <div class="mx-md-3" v-show="visible.potted">
+                        <div v-on:click="menuVisibility('Decorations')">Decorations</div>
+                    </div>
+                <div v-on:click="getMenu('Others')">Others</div>
             </div>
 
             <div v-on:click="menuVisibility('Spring')">Spring</div>
@@ -330,13 +325,79 @@ Vue.component('product', {
 
         <div class="col-md-8">
             <div v-if="clickedMenu === 'Branches & Leaves'">
-                <h1>{{ christmasData }}</h1>
+                <div class="row row-cols-md-4">
+                    <div v-for="christmas in christmasData" class="img-thumbnail" v-show="christmas.Name.split(' ').indexOf('Branch') != -1">
+                        <div><img :src="christmas.Image" class="w-100"></div>
+
+<!--                        <div class="row">-->
+<!--                            <div class="img-thumbnail col-md-6" v-for="colour in christmas.Colour.split(',')">-->
+<!--                                <img :src="colour" class="h-100">-->
+<!--                            </div>-->
+<!--                        </div>-->
+                        <div class="text-center">{{ christmas.Name }}</div>
+                    </div>
+                </div>
             </div>
             
             <div v-if="clickedMenu === 'Circle'">
-                <h1>Circle</h1>
+                <div class="row row-cols-md-4">
+                    <div v-for="christmas in christmasData" class="img-thumbnail" v-show="christmas.Name.split(' ').indexOf('Circle') != -1">
+                        <div><img :src="christmas.Image" class="w-100"></div>
+                        <div class="text-center">{{ christmas.Name }}</div>
+                    </div>
+                </div>
             </div>
             
+<!--            <div v-if="clickedMenu === 'Long Vine'">-->
+<!--                <div class="row row-cols-md-4">-->
+<!--                    <div v-for="christmas in christmasData" class="img-thumbnail" v-show="christmas.Name.split(' ').indexOf('Circle') != -1">-->
+<!--                        <div><img :src="christmas.Image" class="w-100"></div>-->
+<!--                        <div class="text-center">{{ christmas.Name }}</div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+            
+            <div v-if="clickedMenu === 'Water Drop'">
+                <div class="row row-cols-md-4">
+                    <div v-for="christmas in christmasData" class="img-thumbnail" v-show="christmas.Name.split(' ').indexOf('Drop') != -1">
+                        <div><img :src="christmas.Image" class="w-100"></div>
+                        <div class="text-center">{{ christmas.Name }}</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div v-if="clickedMenu === 'Lintel'">
+                <div class="row row-cols-md-4">
+                    <div v-for="christmas in christmasData" class="img-thumbnail" v-show="christmas.Name.split(' ').indexOf('Lintel') != -1">
+                        <div><img :src="christmas.Image" class="w-100"></div>
+                        <div class="text-center">{{ christmas.Name }}</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div v-if="clickedMenu === 'Candlestick'">
+                <div class="row row-cols-md-4">
+                    <div v-for="christmas in christmasData" class="img-thumbnail" v-show="christmas.Name.split(' ').indexOf('Candlestick') != -1">
+                        <div><img :src="christmas.Image" class="w-100"></div>
+                        <div class="text-center">{{ christmas.Name }}</div>
+                    </div>
+                </div>
+            </div>
+            
+<!--             <div v-if="clickedMenu === 'Potted'">-->
+<!--                <div class="row row-cols-md-4">-->
+<!--                    <div v-for="christmas in christmasData" class="img-thumbnail" v-show="christmas.Name.split(' ').indexOf('Potted') != -1">-->
+<!--                        <div><img :src="christmas.Image" class="w-100"></div>-->
+<!--                        <div class="text-center">{{ christmas.Name }}</div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+            
+         
+            
+            <div v-if="clickedMenu === 'Others'">
+                
+            </div>
         </div>
     </div>
     `,
@@ -348,6 +409,7 @@ Vue.component('product', {
                 spring: false
             },
             clickedMenu: '',
+            nameExist:false,
             christmasData: {},
         }
     },
@@ -378,7 +440,13 @@ Vue.component('product', {
     },
     watch: {
         clickedMenu(value) {
-            if (value === 'Branches & Leaves') {
+            if (value === 'Branches & Leaves')
+            {
+                this.loadData();
+                //console.log(value);
+            }
+            else if (value === 'Others')
+            {
                 this.loadData();
             }
         }
