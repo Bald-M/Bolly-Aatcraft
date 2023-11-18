@@ -1,38 +1,33 @@
 /* Mobile Phone */
 @media screen and (max-width: 768px) {
-    .top-nav-link{
-        text-decoration: none;
-        color: #000000;
-        text-transform: uppercase;
-    }
+    .logo{
+        width: 175px;
+        height: 50px !important;
 
-    .navbar-link{
-        background-image: url("../imgs/Logo/Logo配色图.png");
-        background-size: 100% 100%;
+        /* 图片需裁减 */
+        background-image: url("../imgs/Logo/ResizedLogo配色图.png");
+        background-repeat: no-repeat;
+        background-size: 100%;
     }
 
     .banner{
-        width: 1320px;
-        height: 815px;
-    }
-
-    .footer-nav{
-        list-style-type: none;
-    }
-
-    .footer-nav>li>a{
-        text-decoration: none;
-        color: #000000;
+        width: 430px;
     }
 
 }
 
 /* Desktop */
 @media screen and (min-width: 992px) {
+    /*.logo{*/
+    /*    width: 179px;*/
+    /*    height: 115px;*/
+    /*    background-image: url("../imgs/Logo/ResizedLogo配色图.png");*/
+    /*    background-repeat: no-repeat;*/
+    /*    background-size: 100%;*/
+    /*}*/
+
     .banner{
         width: 1320px;
         height: 815px;
     }
-
-
 }

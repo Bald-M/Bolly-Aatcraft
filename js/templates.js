@@ -6,11 +6,11 @@ Vue.component('headers', {
         <div class="row">
             <div class="col-md-12 bg-white">
                     <div class="row">
-                        <div class="col-md-2" style="padding: 0">
-                            <a href="index.html"><img :src="logo" class="logo" /></a>
+                        <div class="col-md-2 col-6">
+                            <img :src="logo" class="logo">
                         </div>
                         
-                        <div class="col-md-10 align-self-md-end">
+                        <div class="col-md-10 col-6 align-self-md-center d-flex justify-content-md-center">
                             <nav class="navbar navbar-expand-lg">
                                 <div class="container-fluid">
                                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -199,42 +199,43 @@ Vue.component('footers', {
                 <!-- Footer -->
             <footer class="text-center text-lg-start bg-white text-muted row">
                 <!-- Section: Social media -->
-                <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+                <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom row">
+                    
                     <!-- Left -->
-                    <div class="me-5 d-none d-lg-block">
-                        <span>Get connected with us on social networks:</span>
+<!--                    <div class="me-md-5 d-none d-lg-block">-->
+<!--                        <span>Get connected with us on social networks:</span>-->
+<!--                    </div>-->
+                    <div class="fs-6 col-12 col-md-6">
+                        <span class="fw-bold font-monospace">Get connected with us on social networks:</span>
                     </div>
-                    <!-- Left -->
-    
-                    <!-- Right -->
-                    <div>
-                        <a href="#" class="me-4 link-secondary">
+                    <div class="col-12 col-md-6 mt-3">
+                        <div class="d-flex justify-content-md-end justify-content-center">
+                            <a href="#" class="me-4 link-secondary">
                             <i class="bi bi-facebook"></i>
-                        </a>
-                        <a href="#" class="me-4 link-secondary">
-                            <i class="bi bi-twitter"></i>
-                        </a>
-                        <a href="#" class="me-4 link-secondary">
-                            <i class="bi bi-google"></i>
-                        </a>
-                        <a href="#" class="me-4 link-secondary">
-                            <i class="bi bi-instagram"></i>
-                        </a>
-                        <a href="#" class="me-4 link-secondary">
-                            <i class="bi bi-linkedin"></i>
-                        </a>
+                            </a>
+                            <a href="#" class="me-4 link-secondary">
+                                <i class="bi bi-twitter"></i>
+                            </a>
+                            <a href="#" class="me-4 link-secondary">
+                                <i class="bi bi-google"></i>
+                            </a>
+                            <a href="#" class="me-4 link-secondary">
+                                <i class="bi bi-instagram"></i>
+                            </a>
+                            <a href="#" class="me-4 link-secondary">
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                        </div>
+                        
                     </div>
-                    <!-- Right -->
                 </section>
-                <!-- Section: Social media -->
-    
                 <!-- Section: Links  -->
                 <section>
                     <div class="container text-center text-md-start mt-5">
                         <!-- Grid row -->
                         <div class="row mt-3">
                             <!-- Grid column -->
-                            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                            <div class="col-md-3 col-lg-4 col-xl-3 col-6 mx-auto mb-4">
                                 <!-- Content -->
                                 <h6 class="text-uppercase fw-bold mb-4">
                                         <i class="bi bi-info-square-fill me-3 text-secondary"></i>ABOUT US
@@ -250,7 +251,7 @@ Vue.component('footers', {
                             <!-- Grid column -->
     
                             <!-- Grid column -->
-                            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                            <div class="col-md-2 col-lg-2 col-xl-2 col-6 mx-auto mb-4">
                                 <!-- Links -->
                                 <h6 class="text-uppercase fw-bold mb-4">
                                     FOLLOW US
@@ -262,7 +263,7 @@ Vue.component('footers', {
                             </div>
     
                             <!-- Grid column -->
-                            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                            <div class="col-md-4 col-lg-3 col-xl-3 col-12 mx-auto mb-md-0 mb-4">
                                 <!-- Links -->
                                 <h6 class="text-uppercase fw-bold mb-4">CONTACT US</h6>
                                 <p><i class="bi bi-house-fill me-3 text-secondary"></i>Xiahe Centralised Industrial Zone, Zhangzhou, Fujian Province, China</p>
@@ -281,7 +282,7 @@ Vue.component('footers', {
                 <!-- Section: Links  -->
     
                 <!-- Copyright -->
-                <div class="text-center p-4">
+                <div class="text-center p-4 font-monospace fw-bold">
                     Copyright © 2023 Zhangzhou Polly Arts Industrial and Trade Co,.Ltd.
                 </div>
                 <!-- Copyright -->
@@ -295,37 +296,37 @@ Vue.component('product', {
     `
     <div class="row my-md-5">
         <div class="col-md-4">
-            <div v-on:click="menuVisibility('Christmas')">Christmas</div>
+            <div v-on:click="menuVisibility('Christmas')" class="product-nav">Christmas</div>
 <!--            Christmas sub menu -->
             <div class="mx-md-3" v-show="visible.christmas">
-                <div v-on:click="getMenu('Branches & Leaves')">Branches & Leaves</div>
-                <div v-on:click="getMenu('Circle')">Circle</div>
-                <div v-on:click="getMenu('Long Vine')">Long Vine</div>
-                <div v-on:click="getMenu('Water Drop')">Water Drop</div>
-                <div v-on:click="getMenu('Lintel')">Lintel</div>
-                <div v-on:click="getMenu('Candlestick')">Candlestick</div>
-                <div v-on:click="menuVisibility('Potted')">Potted</div>
+                <div v-on:click="getMenu('Branches & Leaves')" class="product-sub-nav">Branches & Leaves</div>
+                <div v-on:click="getMenu('Circle')" class="product-sub-nav">Circle</div>
+                <div v-on:click="getMenu('Long Vine')" class="product-sub-nav">Long Vine</div>
+                <div v-on:click="getMenu('Water Drop')" class="product-sub-nav">Water Drop</div>
+                <div v-on:click="getMenu('Lintel')" class="product-sub-nav">Lintel</div>
+                <div v-on:click="getMenu('Candlestick')" class="product-sub-nav">Candlestick</div>
+                <div v-on:click="menuVisibility('Potted')" class="product-sub-nav">Potted</div>
                     <div class="mx-md-3" v-show="visible.potted">
-                        <div v-on:click="menuVisibility('Decorations')">Decorations</div>
+                        <div v-on:click="menuVisibility('Decorations')" class="product-sub-nav">Decorations</div>
                     </div>
-                <div v-on:click="getMenu('Others')">Others</div>
+                <div v-on:click="getMenu('Others')" class="product-sub-nav">Others</div>
             </div>
 
-            <div v-on:click="menuVisibility('Spring')">Spring</div>
+            <div v-on:click="menuVisibility('Spring')" class="product-nav">Spring</div>
 <!--            spring sub menu-->
             <div class="mx-md-3" v-show="visible.spring">
-                <div>Floral</div>
-                <div>Foliage</div>
-                <div>Potted</div>
-                <div>Fruit & Berries</div>
-                <div>Others</div>
+                <div class="product-sub-nav">Floral</div>
+                <div class="product-sub-nav">Foliage</div>
+                <div class="product-sub-nav">Potted</div>
+                <div class="product-sub-nav">Fruit & Berries</div>
+                <div class="product-sub-nav">Others</div>
             </div>
-            <div v-on:click="menuVisibility('Popular product')">Popular product</div>
+            <div v-on:click="menuVisibility('Popular product')" class="product-nav">Popular product</div>
         </div>
 
         <div class="col-md-8">
             <div v-if="clickedMenu === 'Branches & Leaves'">
-                <div class="row row-cols-md-4">
+                <div class="row row-cols-md-4 row-cols-2">
                     <div v-for="christmas in christmasData" class="img-thumbnail" v-show="christmas.Name.split(' ').indexOf('Branch') != -1">
                         <div><img :src="christmas.Image" class="w-100"></div>
 
@@ -392,9 +393,7 @@ Vue.component('product', {
 <!--                    </div>-->
 <!--                </div>-->
 <!--            </div>-->
-            
-         
-            
+
             <div v-if="clickedMenu === 'Others'">
                 
             </div>
