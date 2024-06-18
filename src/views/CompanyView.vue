@@ -96,7 +96,7 @@ export default {
     data() {
         return {
             data: [
-                new Milestone(2013, 1.1, this.$baseUrl+'2.jpg', 'Set up processing factory'),
+                new Milestone(2013, 1.1, this.$baseUrl+'4.jpg', 'Set up processing factory'),
                 new Milestone(2014, 1.2, this.$baseUrl+'9.jpg', 'Increase production line'),
                 new Milestone(2015, 1.3, this.$baseUrl+'10.jpg', 'Add machines, scale up'),
                 new Milestone(2016, 1.4, this.$baseUrl+'7.jpg', 'Increase production line'),
