@@ -1,4 +1,4 @@
-# bolly-aatcraft
+# bolly-aatcraft-frontend
 
 ## Project setup
 ```
